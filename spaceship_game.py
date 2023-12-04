@@ -399,9 +399,10 @@ while RunGameLoop:
                 manager.resetGame()
                 manager.in_menu = True
                 manager.pause = False
-        elif manager.game_over:
+        elif manager.game_over or manager.game_won:
             if event.type == pygame.KEYUP and event.key == pygame.K_SPACE:
                 manager.in_menu = True
+                manager.game_won = True
                 manager.game_over = False
         else:
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
