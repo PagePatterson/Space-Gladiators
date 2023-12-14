@@ -243,6 +243,8 @@ class GameMenu():
         self.to_nav1_rect = self.to_nav1.get_rect(center = (400, 650))
         self.to_nav2 = sub_font.render(f'press enter to continue', True, (64,64,64))
         self.to_nav2_rect = self.to_nav2.get_rect(center = (400, 700))
+        self.to_nav3 = sub_font.render(f'turn volume up for music', True, (64,64,64))
+        self.to_nav3_rect = self.to_nav3.get_rect(center = (400, 600))
         self.space = sub_font.render(f'press space to continue', True, (64,64,64))
         self.space_rect = self.to_nav2.get_rect(center = (400, 750))
 
@@ -269,6 +271,7 @@ class GameMenu():
         if manager.highscore == 'None':
             screen.blit(self.to_nav1,self.to_nav1_rect)
             screen.blit(self.to_nav2,self.to_nav2_rect)
+            screen.blit(self.to_nav3,self.to_nav3_rect)
 
     def credit(self):
         screen.blit(self.background, (0,0))
